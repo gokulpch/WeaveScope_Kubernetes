@@ -1,2 +1,2 @@
-# Weavescope_kubernetes
-Weave Scope Visualization and Monitoring for Kubernetes
+# WeaveScope_Kubernetes
+Weave Scope on Kubernetes for Visualization and Monitoring

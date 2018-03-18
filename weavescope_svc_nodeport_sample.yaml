@@ -1,0 +1,43 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    cloud.weave.works/launcher-info: |-
+      {
+        "original-request": {
+          "url": "/k8s/v1.8/scope.yaml?k8s-version=Q2xpZW50IFZlcnNpb246IHZlcnNpb24uSW5mb3tNYWpvcjoiMSIsIE1pbm9yOiI5IiwgR2l0VmVyc2lvbjoidjEuOS4yIiwgR2l0Q29tbWl0OiI1ZmEyZGIyYmQ0NmFjNzllNWUwMGE0ZTZlZDI0MTkxMDgwYWE0NjNiIiwgR2l0VHJlZVN0YXRlOiJjbGVhbiIsIEJ1aWxkRGF0ZToiMjAxOC0wMS0xOFQxMDowOToyNFoiLCBHb1ZlcnNpb246ImdvMS45LjIiLCBDb21waWxlcjoiZ2MiLCBQbGF0Zm9ybToibGludXgvYW1kNjQifQpTZXJ2ZXIgVmVyc2lvbjogdmVyc2lvbi5JbmZve01ham9yOiIxIiwgTWlub3I6IjkiLCBHaXRWZXJzaW9uOiJ2MS45LjEiLCBHaXRDb21taXQ6IjNhMWM5NDQ5YTk1NmI2MDI2ZjA3NWZhMzEzNGZmOTJmN2Q1NWY4MTIiLCBHaXRUcmVlU3RhdGU6ImNsZWFuIiwgQnVpbGREYXRlOiIyMDE4LTAxLTA0VDExOjQwOjA2WiIsIEdvVmVyc2lvbjoiZ28xLjkuMiIsIENvbXBpbGVyOiJnYyIsIFBsYXRmb3JtOiJsaW51eC9hbWQ2NCJ9Cg==",
+          "date": "Tue Mar 06 2018 02:10:40 GMT+0000 (UTC)"
+        },
+        "email-address": "support@weave.works"
+      }
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{"cloud.weave.works/launcher-info":"{\n  \"original-request\": {\n    \"url\": \"/k8s/v1.8/scope.yaml?k8s-version=Q2xpZW50IFZlcnNpb246IHZlcnNpb24uSW5mb3tNYWpvcjoiMSIsIE1pbm9yOiI5IiwgR2l0VmVyc2lvbjoidjEuOS4yIiwgR2l0Q29tbWl0OiI1ZmEyZGIyYmQ0NmFjNzllNWUwMGE0ZTZlZDI0MTkxMDgwYWE0NjNiIiwgR2l0VHJlZVN0YXRlOiJjbGVhbiIsIEJ1aWxkRGF0ZToiMjAxOC0wMS0xOFQxMDowOToyNFoiLCBHb1ZlcnNpb246ImdvMS45LjIiLCBDb21waWxlcjoiZ2MiLCBQbGF0Zm9ybToibGludXgvYW1kNjQifQpTZXJ2ZXIgVmVyc2lvbjogdmVyc2lvbi5JbmZve01ham9yOiIxIiwgTWlub3I6IjkiLCBHaXRWZXJzaW9uOiJ2MS45LjEiLCBHaXRDb21taXQ6IjNhMWM5NDQ5YTk1NmI2MDI2ZjA3NWZhMzEzNGZmOTJmN2Q1NWY4MTIiLCBHaXRUcmVlU3RhdGU6ImNsZWFuIiwgQnVpbGREYXRlOiIyMDE4LTAxLTA0VDExOjQwOjA2WiIsIEdvVmVyc2lvbjoiZ28xLjkuMiIsIENvbXBpbGVyOiJnYyIsIFBsYXRmb3JtOiJsaW51eC9hbWQ2NCJ9Cg==\",\n    \"date\": \"Tue Mar 06 2018 02:10:40 GMT+0000 (UTC)\"\n  },\n  \"email-address\": \"support@weave.works\"\n}"},"labels":{"app":"weave-scope","name":"weave-scope-app","weave-cloud-component":"scope","weave-scope-component":"app"},"name":"weave-scope-app","namespace":"weave"},"spec":{"ports":[{"name":"app","port":80,"protocol":"TCP","targetPort":4040}],"selector":{"app":"weave-scope","name":"weave-scope-app","weave-cloud-component":"scope","weave-scope-component":"app"}}}
+  creationTimestamp: 2018-03-06T02:10:41Z
+  labels:
+    app: weave-scope
+    name: weave-scope-app
+    weave-cloud-component: scope
+    weave-scope-component: app
+  name: weave-scope-app
+  namespace: weave
+  resourceVersion: "4733678"
+  selfLink: /api/v1/namespaces/weave/services/weave-scope-app
+  uid: 923a4327-20e3-11e8-a143-026bab2eee80
+spec:
+  clusterIP: 10.105.189.160
+  externalTrafficPolicy: Cluster
+  ports:
+  - name: app
+    nodePort: 32185
+    port: 80
+    protocol: TCP
+    targetPort: 4040
+  selector:
+    app: weave-scope
+    name: weave-scope-app
+    weave-cloud-component: scope
+    weave-scope-component: app
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}
